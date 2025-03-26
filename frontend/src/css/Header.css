@@ -2,34 +2,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #026830;
-    padding: 15px;
+    padding: 15px 25px;
   }
-  
-  .site-title {
-    color: #fff;
-    font-weight: bold;
+.header h1 {
+  font-weight: bold;
+}
+  .header-right > input, button{
+    margin-left: 3.125rem;
   }
-  
   .search-input {
-    width: 300px;
-    max-width: 100%;
-    padding: 8px;
+    width: 18.75rem;
+    padding: 0.313rem 0.938rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 1rem;
   }
-  
-  .cart-button {
-    background-color: #fff;
-    color: #026830;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  .cart-button:hover {
-    background-color: #e0e0e0;
+  .search-input::placeholder {
+    color: #8B5E3B;
   }
   
   
