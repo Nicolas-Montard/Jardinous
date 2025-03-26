@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/vich/uploader-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/maker-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php84" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/doctrine-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/doctrine-migrations-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/property-info" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/property-access" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
