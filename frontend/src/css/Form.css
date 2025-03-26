@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 37.5rem;
+    align-items: stretch;
+    padding: 1.5rem;
+}
+
+form > input, select, button {
+    margin-bottom: 1rem;
+}
+.small {
+    width: 12.5rem;
+}
+.form-wrapper{
+    margin-top: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-wrapper > h1, form{
+    margin-bottom: 3.125rem;
+}
