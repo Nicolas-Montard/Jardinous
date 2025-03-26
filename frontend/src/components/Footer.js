@@ -4,7 +4,7 @@ import '../css/Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>Made with love by Nicolas, Oinare & Valentin</p>
+      <p>Made with love by Nicolas, Oriane & Valentin</p>
     </footer>
   );
 }

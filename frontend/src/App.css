@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .app-container {
@@ -24,6 +24,46 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+
+h1{
+  font-size: 1.5rem;
+}
+h2{
+  font-size: 1.375rem;
+}
+h3{
+  font-size: 1.25rem;
+}
+h4{
+  font-size: 1.125rem;
+}
+h5{
+  font-size: 1rem;
+}
+h6{
+  font-size: 0.875rem;
+}
+p{
+  font-size: 0.75rem;
+}
+
+.bg-green{
+  background-color: #1F5436;
+  color: white;
+}
+
+.bg-grey{
+  background-color: #F7F7F7;
+  color: #8B5E3B;
+}
+
+.btn-brown{
+  background-color: #8B5E3B;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  border-radius: 15px;
+  border: none;
 }
 
 
