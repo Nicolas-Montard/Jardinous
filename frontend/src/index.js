@@ -5,7 +5,7 @@ import App from './App';
 import {BrowserRouter, Route, Routes} from "react-router";
 import CreateOffer from "./elements/CreateOffre";
 import CreateCategory from "./elements/CreateCategory";
-import FormDelete from "./components/FormDelete";
+import FormDelete from "./elements/FormDelete";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
