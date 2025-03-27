@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ToolRepository;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -14,30 +16,30 @@ class Tool
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     private ?int $id = null;
 
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     #[ORM\Column]
     private ?int $priceByDay = null;
 
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     #[ORM\Column]
     private ?int $stock = null;
 
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $createdAt = null;
 
-    #[Groups(['tool', 'category'])]
+    #[Groups(['tool', 'category', 'user', 'onLocate'])]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $picture = null;
 
@@ -45,10 +47,18 @@ class Tool
     #[ORM\ManyToOne(inversedBy: 'tools')]
     private ?Category $category = null;
 
+    /**
+     * @var Collection<int, OnLocate>
+     */
+    #[Groups(['tool'])]
+    #[ORM\ManyToMany(targetEntity: OnLocate::class, mappedBy: 'tools')]
+    private Collection $onLocates;
+
 
     public function __construct()
     {
         $this->setCreatedAt(new \DateTime());
+        $this->onLocates = new ArrayCollection();
     }
 
     /**
@@ -140,6 +150,33 @@ class Tool
     public function setCategory(?Category $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, OnLocate>
+     */
+    public function getOnLocates(): Collection
+    {
+        return $this->onLocates;
+    }
+
+    public function addOnLocate(OnLocate $onLocate): static
+    {
+        if (!$this->onLocates->contains($onLocate)) {
+            $this->onLocates->add($onLocate);
+            $onLocate->addTool($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOnLocate(OnLocate $onLocate): static
+    {
+        if ($this->onLocates->removeElement($onLocate)) {
+            $onLocate->removeTool($this);
+        }
 
         return $this;
     }
