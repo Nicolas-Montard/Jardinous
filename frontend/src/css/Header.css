@@ -4,14 +4,14 @@
     justify-content: space-between;
     padding: 15px 25px;
   }
-.header h1 {
+.header > h1 {
   font-weight: bold;
 }
 .header-right{
     display: flex;
     align-items: center;
 }
-  .header-right > input, button{
+  .header-right > input, .header-right > button{
     margin-left: 3.125rem;
   }
   .search-input {
