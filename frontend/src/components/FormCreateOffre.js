@@ -12,7 +12,7 @@ function FormCreateOffre() {
         category: ""
     });
 
-    const baseUrl = process.env.BASE_URL;
+    const baseUrl = process.env.REACT_APP_URL_BACKEND;
     //Charge les catégories
     useEffect(() => {
         fetch(`${baseUrl}category`)
