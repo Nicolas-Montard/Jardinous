@@ -35,9 +35,14 @@ final class ToolController extends AbstractController
         return $this->json($tool, 200, [], ['groups' => 'tool']);
     }
     #[Route('/tool', name: 'get_all_tool', methods: ['GET'])]
-    public function getAll(ToolRepository $toolRepository, SerializerInterface $serializer): JsonResponse
+    public function getAll(ToolRepository $toolRepository): JsonResponse
     {
         $tools = $toolRepository->findAll();
         return $this->json($tools, 200, [], ['groups' => 'tool']);
+    }
+    #[Route('/tool/{id}', name: 'get_all_tool', methods: ['GET'])]
+    public function getOneById(Tool $tool): JsonResponse
+    {
+        return $this->json($tool, 200, [], ['groups' => 'tool']);
     }
 }
