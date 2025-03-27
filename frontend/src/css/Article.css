@@ -19,7 +19,7 @@
   width: 120px;
   height: 120px;
   object-fit: cover;
-  background-color: #ccc; /* Couleur de fond si l'image est transparente */
+  background-color: #ccc; 
   border-radius: 4px;
 }
 
@@ -31,7 +31,7 @@
 
 .article-title {
   font-size: 1.1rem;
-  color: #026830; /* Couleur verte */
+  color: #026830; 
   margin: 0;
 }
 
@@ -54,7 +54,7 @@
 
 .article-button {
   align-self: start;
-  background-color: #a2512f; /* marron */
+  background-color: #a2512f; 
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -63,5 +63,5 @@
 }
 
 .article-button:hover {
-  background-color: #843e22; /* marron foncé */
+  background-color: #843e22; 
 }

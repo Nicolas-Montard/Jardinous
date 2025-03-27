@@ -1,0 +1,28 @@
+.caddie-form {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  
+  }
+  
+  .caddie-form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .caddie-form-section h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .caddie-form-section label {
+    font-weight: bold;
+  }
+  
+  .caddie-form-section .btn-brown {
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
