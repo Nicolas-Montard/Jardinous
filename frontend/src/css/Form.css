@@ -6,7 +6,7 @@ form {
     padding: 1.5rem;
 }
 
-form > input, select, button {
+form > input, form > select, form > button {
     margin-bottom: 1rem;
 }
 .small {
@@ -18,6 +18,19 @@ form > input, select, button {
     flex-direction: column;
     align-items: center;
 }
-.form-wrapper > h1, form{
+.form-wrapper > h1, .form-wrapper > form{
     margin-bottom: 3.125rem;
+}
+
+.radio-form-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+.delete-offre{
+    align-items: center;
+}
+.delete-offre > h1, .delete-offre > div, .delete-offre > input{
+    margin-bottom: 50px;
 }
