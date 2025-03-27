@@ -40,7 +40,7 @@ final class ToolController extends AbstractController
         $tools = $toolRepository->findAll();
         return $this->json($tools, 200, [], ['groups' => 'tool']);
     }
-    #[Route('/tool/{id}', name: 'get_all_tool', methods: ['GET'])]
+    #[Route('/tool/{id}', name: 'get_one_tool', methods: ['GET'])]
     public function getOneById(Tool $tool): JsonResponse
     {
         return $this->json($tool, 200, [], ['groups' => 'tool']);
