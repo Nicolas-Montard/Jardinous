@@ -13,7 +13,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 
 final class CategoryController extends AbstractController
 {
-    #[Route('/category', name: 'app_category', methods: ['POST'])]
+    #[Route('/category', name: 'new_category', methods: ['POST'])]
     public function new(Request $request, SerializerInterface $serializer, EntityManagerInterface $entityManager): JsonResponse
     {
         $category = $serializer->deserialize(
@@ -26,5 +26,11 @@ final class CategoryController extends AbstractController
         $entityManager->flush();
 
         return $this->json($category, 200, [], ['groups' => 'category']);
+    }
+    #[Route('/category', name: 'get_all_category', methods: ['GET'])]
+    public function getAll(CategoryRepository $categoryRepository): JsonResponse
+    {
+        $categories = $categoryRepository->findAll();
+        return $this->json($categories, 200, [], ['groups' => 'category']);
     }
 }
