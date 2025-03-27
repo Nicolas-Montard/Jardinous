@@ -8,7 +8,8 @@ function FormCreateCategory() {
     const handleSubmit = async (event) => {
         event.preventDefault(); // Pour ne pas recharger la page
         const newCategory = {name};
-        const baseUrl = process.env.BASE_URL;
+        const baseUrl = process.env.REACT_APP_URL_BACKEND;
+        console.log(baseUrl)
         try {
             const response = await fetch(`${baseUrl}category`, {
                 method: "POST",
