@@ -20,11 +20,7 @@ body {
   padding: 30px;
 }
 
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
+
 
 h1{
   font-size: 1.5rem;

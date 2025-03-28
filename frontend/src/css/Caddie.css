@@ -1,0 +1,15 @@
+.caddie-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .caddie-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+
+  
+ 
