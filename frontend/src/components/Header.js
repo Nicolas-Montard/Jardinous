@@ -5,7 +5,7 @@ import { faCircleUser, faCartShopping } from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
-function Header() {
+function Header({ searchTerm, setSearchTerm }) {
   const { cartItems } = useCart();
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -19,6 +19,8 @@ function Header() {
           type="text"
           className="search-input bg-grey"
           placeholder="Rechercher un outil"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link to="/caddie" className="header-cart">
           <button className="btn-icon">
@@ -37,3 +39,4 @@ function Header() {
 }
 
 export default Header;
+

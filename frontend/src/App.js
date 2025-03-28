@@ -1,14 +1,13 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ArticleList from './components/ArticleList';
 import { getProducts } from './services/ProductService'; 
 import './App.css';
 
-console.log('getProducts:', getProducts);
-
 function App() {
   const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -18,12 +17,17 @@ function App() {
     fetchData();
   }, []);
 
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="app-container">
-      <Header />
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <main className="main-content">
-        <ArticleList articles={products} />
+        
+        <ArticleList articles={filteredProducts} />
       </main>
 
       <Footer />
