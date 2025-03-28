@@ -45,4 +45,12 @@ final class ToolController extends AbstractController
     {
         return $this->json($tool, 200, [], ['groups' => 'tool']);
     }
+    #[Route('/tool/{id}', name: 'delete_tool', methods: ['DELETE'])]
+    public function deleteOneById(Tool $tool, EntityManagerInterface $entityManager): JsonResponse
+    {
+        $entityManager->remove($tool);
+        $entityManager->flush();
+
+        return $this->json(['message' => 'Tool deleted successfully'], 200);
+    }
 }
