@@ -6,7 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router";
 import CreateOffer from "./elements/CreateOffre";
 import CreateCategory from "./elements/CreateCategory";
 import Caddie from "./components/Caddie";
-import FormDelete from "./components/FormDelete";
+import FormDelete from "./elements/FormDelete";
 import { CartProvider } from './context/CartContext';
 
 
